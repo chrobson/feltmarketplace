@@ -50,10 +50,10 @@ const ListingCard: React.FC<ListingCardProps> = ({ listing }) => {
                 </div>
               </div>
             )}
-            <p className="mt-3 text-gray-600 text-sm truncate-3-lines h-[3.75rem]">{listing.description}</p>
+            <p className="mt-3 text-gray-600 text-sm line-clamp-3 min-h-[3.75rem]">{listing.description}</p>
           </div>
           
-          <div className="mt-4">
+          <div className="mt-6 pt-4 border-t border-gray-100">
             {listing.listingType === ListingType.STAKING && listing.stakingDetails && costPerPercent !== null && (
               <div className="text-sm text-gray-700">
                 <p><span className="font-semibold">Buy-in:</span> ${listing.stakingDetails.totalBuyIn.toLocaleString()}</p>
